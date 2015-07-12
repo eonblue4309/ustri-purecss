@@ -1,0 +1,73 @@
+body
+  background-color: $ustri-dark
+  font-size: 16pt
+  color: $ustri-light
+  font-family: 'Noto Sans', sans-serif
+
+  border: $content-border;
+
+.content:nth-child(even)
+  background-color: $ustri-dark
+  color: $ustri-light
+
+.content:nth-child(odd)
+  background-color: $ustri-light
+  color: $ustri-dark
+
+.content
+  border-bottom: $content-border
+  padding: 0 1em 2em 1em
+
+  p
+    padding-bottom: 1em
+    line-height: 1.5
+
+    &:last-child
+      padding-bottom: 0;
+
+  &:after,
+  &:before
+    content: ""
+    display: table
+    clear: both
+
+.content--body
+  p
+    padding: 1em
+
+.content--aside
+  height: 275px;
+  width: 100%
+
+
+@mixin content-background-image($url)
+  background-image: url($url)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+.intro-image
+  +content-background-image('http://www.fillmurray.com/1000/500')
+
+.what-is-iai-image
+  +content-background-image('http://www.fillmurray.com/1000/500')
+
+.what-is-tri-image
+  +content-background-image('http://www.fillmurray.com/1000/500')
+
+.curriculum-image
+  +content-background-image('http://www.fillmurray.com/1000/500')
+
+@media (min-width: 1024px)
+
+  .content--aside
+    float: right
+    width: 40%
+    margin: 0 0 0 1em
+
+  .content:nth-child(odd)
+    .content--aside
+      float: left
+      margin: 0 1em 0 0
+
+
