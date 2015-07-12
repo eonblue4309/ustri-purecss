@@ -1,0 +1,215 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.6em;
+  margin: 1em;
+}
+
+h4 {
+  font-size: 1.4em;
+  margin: 1em;
+}
+
+.site-header {
+  background-color: pink;
+  padding: 3em 0 2.5em 0;
+}
+
+.site-title {
+  font-size: 1em;
+}
+
+.site-title--name-line + .site-title--name-line {
+  margin-top: 8px;
+}
+
+.site-title--name {
+  display: inline-block;
+  padding-left: 2.8em;
+  background-image: url("images/kikyo-true-white.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.site-nav {
+  text-align: center;
+  margin: 1em 0;
+  font-size: .9em;
+}
+
+.site-nav--link {
+  display: inline-block;
+  color: #ddd;
+  text-decoration: none;
+  padding: 1em 0.5em;
+}
+
+.site-nav--link:focus,
+.site-nav--link:hover {
+  background-color: #ddd;
+  color: #202020;
+}
+
+.site-nav--home {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.site-nav--home:focus,
+.site-nav--home:hover {
+  color: #ddd;
+}
+
+.site-nav--home:focus .site-nav--name-line,
+.site-nav--home:hover .site-nav--name-line {
+  border-bottom: 3px solid #ddd;
+}
+
+body {
+  background-color: #202020;
+  font-size: 16pt;
+  color: #ddd;
+  font-family: 'Noto Sans', sans-serif;
+  border: 8px solid white;
+}
+
+.content:nth-child(even) {
+  background-color: #202020;
+  color: #ddd;
+}
+
+.content:nth-child(odd) {
+  background-color: #ddd;
+  color: #202020;
+}
+
+.content {
+  border-bottom: 8px solid white;
+  padding: 3em 0;
+}
+
+.content p {
+  padding-bottom: 1em;
+  line-height: 1.5;
+}
+
+.content p:last-child {
+  padding-bottom: 0;
+}
+
+.content:after,
+.content:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content--body p {
+  padding: 1em;
+}
+
+.content--aside {
+  height: 275px;
+  width: 100%;
+}
+
+.intro-image {
+  background-image: url("http://www.fillmurray.com/1000/500");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.what-is-iai-image {
+  background-image: url("http://www.fillmurray.com/1000/500");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.what-is-tri-image {
+  background-image: url("http://www.fillmurray.com/1000/500");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.curriculum-image {
+  background-image: url("http://www.fillmurray.com/1000/500");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .content--aside {
+    float: right;
+    width: 40%;
+    margin: 0 0 0 1em;
+  }
+  .content:nth-child(odd) .content--aside {
+    float: left;
+    margin: 0 1em 0 0;
+  }
+}
