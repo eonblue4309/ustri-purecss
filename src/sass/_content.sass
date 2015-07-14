@@ -10,13 +10,30 @@ body
   background-color: $ustri-dark
   color: $ustri-light
 
+  a
+    color: $ustri-light
+
+    &:hover
+      background-color: $ustri-light
+      color: $ustri-dark
+
 .content:nth-child(odd)
   background-color: $ustri-light
   color: $ustri-dark
 
+  a
+    color: $ustri-dark
+
+    &:hover
+      background-color: $ustri-dark
+      color: $ustri-light
+
 .content
   border-bottom: $content-border
   padding: 3em 0
+
+  a
+    transition: 300ms ease
 
   p
     padding-bottom: 1em
@@ -31,14 +48,14 @@ body
     display: table
     clear: both
 
-.content--body
+.content
   p
     padding: 1em
 
-.content--aside
+.content--aside,
+.content--aside--location
   height: 275px;
   width: 100%
-
 
 @mixin content-background-image($url)
   background-image: url($url)
@@ -58,16 +75,22 @@ body
 .curriculum-image
   +content-background-image('http://www.fillmurray.com/1000/500')
 
-@media (min-width: 1024px)
+@media (min-width: 700px)
 
-  .content--aside
+  .content--aside,
+  .content--aside--location
     float: right
     width: 40%
     margin: 0 0 0 1em
 
   .content:nth-child(odd)
-    .content--aside
+    .content--aside,
       float: left
       margin: 0 1em 0 0
 
+  .content--aside--location-left
+    float: left
+    margin: 0 1em 0 0
 
+  .content--aside--location-rigth
+    float: right
