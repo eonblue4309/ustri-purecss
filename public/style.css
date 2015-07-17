@@ -51,7 +51,15 @@ table {
   box-sizing: border-box;
 }
 
-.list, .list--ordered {
+sup {
+  font-size: .7em;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.list, .list--ordered, .list--unordered {
   margin: 0 0 0 3em;
 }
 
@@ -59,8 +67,16 @@ table {
   list-style-type: decimal;
 }
 
+.list--unordered {
+  list-style-type: square;
+}
+
 .list--soke li {
   padding: 1em 0;
+}
+
+.list--instructors > li {
+  padding: 1.5em 0;
 }
 
 h1 {
@@ -138,6 +154,7 @@ h4 {
 .site-nav--link:hover {
   background-color: #ddd;
   color: #202020;
+  text-decoration: none;
 }
 
 .site-nav--home {
@@ -148,6 +165,7 @@ h4 {
 .site-nav--home:focus,
 .site-nav--home:hover {
   color: #ddd;
+  text-decoration: none;
 }
 
 .site-nav--home:focus .site-nav--name-line,
@@ -203,6 +221,7 @@ body {
 .content p {
   padding-bottom: 1em;
   line-height: 1.5;
+  text-indent: 1.5em;
 }
 
 .content p:last-child {
@@ -254,6 +273,22 @@ body {
   background-repeat: no-repeat;
 }
 
+.by-line {
+  white-space: pre-wrap;
+  line-height: 1.3em;
+  padding-left: 1.5em;
+}
+
+.special-offer {
+  margin: 1em;
+  background-color: #f2f2f2;
+  color: #202020;
+}
+
+.special-offer--free {
+  font-weight: bold;
+}
+
 @media (min-width: 700px) {
   .content--aside,
   .content--aside--location {
@@ -272,6 +307,26 @@ body {
   .content--aside--location-rigth {
     float: right;
   }
+}
+
+.resource--link {
+  padding: 1em;
+  display: inline-block;
+}
+
+.instructor-info {
+  margin: 0 3em;
+}
+
+.instructor-info--name {
+  font-size: 1em;
+  margin: 0;
+  font-weight: bold;
+  padding-bottom: .5em;
+}
+
+.instructor-info--email {
+  padding-top: .5em;
 }
 
 div.contain {
