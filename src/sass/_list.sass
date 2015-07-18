@@ -1,4 +1,8 @@
+%list
+  line-height: 1.5em
+
 .list
+  @extend %list
   margin: 0 0 0 3em
 
 .list--ordered
@@ -10,9 +14,14 @@
   list-style-type: square
 
 .list--soke
+  @extend .list
   li
     padding: 1em 0
 
 .list--instructors
+  @extend %list
   > li
     padding: 1.5em 0
+
+.list--members
+  @extend %list

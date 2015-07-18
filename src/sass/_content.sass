@@ -35,23 +35,28 @@ body
   a
     transition: 300ms ease
 
+  blockquote
+    line-height: 1.5
+    margin-left: 3em
   p
-    padding-bottom: 1em
+    padding: 1em
     line-height: 1.5
     text-indent: 1.5em
 
     &:last-child
       padding-bottom: 0;
 
+  > p,
+  > div,
+  > section
+    max-width: 1300px
+    margin: 0 auto
+
   &:after,
   &:before
     content: ""
     display: table
     clear: both
-
-.content
-  p
-    padding: 1em
 
 .content--aside,
 .content--aside--location
@@ -65,16 +70,16 @@ body
   background-repeat: no-repeat
 
 .intro-image
-  +content-background-image('http://www.fillmurray.com/1000/500')
+  +content-background-image('images/all-member-tou-rei.jpg')
 
 .what-is-iai-image
-  +content-background-image('http://www.fillmurray.com/1000/500')
+  +content-background-image('images/katana.jpg')
 
 .what-is-tri-image
-  +content-background-image('http://www.fillmurray.com/1000/500')
+  +content-background-image('images/katana.jpg')
 
 .curriculum-image
-  +content-background-image('http://www.fillmurray.com/1000/500')
+  +content-background-image('images/katana.jpg')
 
 .by-line
   white-space: pre-wrap
@@ -89,7 +94,7 @@ body
 .special-offer--free
   font-weight: bold
 
-@media (min-width: 700px)
+@media (min-width: 850px)
 
   .content--aside,
   .content--aside--location
