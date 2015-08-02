@@ -109,7 +109,7 @@ h4 {
 }
 
 .intro-image {
-  background-image: url("images/all-member-tou-rei.jpg");
+  background-image: url("images/all-member-tou-rei-scaled.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,7 +151,7 @@ h4 {
 }
 
 .training-info-image {
-  background-image: url("images/katana.jpg");
+  background-image: url("images/katana-scaled.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
