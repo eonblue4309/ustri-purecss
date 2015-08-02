@@ -26,7 +26,7 @@ module.exports = (grunt) ->
     watch:
       compile:
         files: ['src/**/*.jade', 'src/**/*.sass']
-        tasks: ['jade', 'sass', 'newer:imagemin:images']
+        tasks: ['jade', 'sass', 'imagemin:images']
         options:
           livereload: true
           port: 9000

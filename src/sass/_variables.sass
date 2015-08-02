@@ -1,3 +1,10 @@
 $ustri-light: #ddd
 $ustri-dark: #202020
 $content-border: 8px solid white;
+$content-max-width: 1166px
+
+@mixin section-image($url)
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($url);
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center

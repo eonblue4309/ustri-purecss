@@ -4,14 +4,14 @@ body
   color: $ustri-light
   font-family: 'Noto Sans', sans-serif
 
-  border: $content-border;
-
 .content:nth-child(even)
   background-color: $ustri-dark
   color: $ustri-light
 
   a
     color: $ustri-light
+    transition: 300ms ease
+
 
     &:hover
       background-color: $ustri-light
@@ -29,11 +29,15 @@ body
       color: $ustri-light
 
 .content
-  border-bottom: $content-border
-  padding: 3em 0
 
-  a
-    transition: 300ms ease
+  border-bottom: $content-border
+  padding: 3em .5em
+
+  // a
+  //   transition: 300ms ease
+
+  a.content--dojo-link
+    display: inline;
 
   blockquote
     line-height: 1.5
@@ -43,14 +47,18 @@ body
     line-height: 1.5
     text-indent: 1.5em
 
+    .special-offer
+      margin: 1em
+      padding: 0 1em
+      background-color: #f2f2f2
+      color: $ustri-dark
+      display: inline-block
+
+    .special-offer--free
+      font-weight: bold
+
     &:last-child
       padding-bottom: 0;
-
-  > p,
-  > div,
-  > section
-    max-width: 1300px
-    margin: 0 auto
 
   &:after,
   &:before
@@ -58,48 +66,43 @@ body
     display: table
     clear: both
 
+.content--body
+  max-width: $content-max-width
+  margin: 0 auto
+
+.content--body--inner
+  &:after
+    content: ''
+    display: table
+    clear: both
+
 .content--aside,
 .content--aside--location
-  height: 275px;
+  height: 325px;
   width: 100%
-
-@mixin content-background-image($url)
-  background-image: url($url)
-  background-size: cover
-  background-position: center
-  background-repeat: no-repeat
-
-.intro-image
-  +content-background-image('images/all-member-tou-rei.jpg')
-
-.what-is-iai-image
-  +content-background-image('images/katana.jpg')
-
-.what-is-tri-image
-  +content-background-image('images/katana.jpg')
-
-.curriculum-image
-  +content-background-image('images/katana.jpg')
 
 .by-line
   white-space: pre-wrap
   line-height: 1.3em
   padding-left: 1.5em
 
-.special-offer
-  margin: 1em
-  background-color: #f2f2f2
-  color: $ustri-dark
 
-.special-offer--free
-  font-weight: bold
+@media (min-width: 690px)
+  .content
+    padding: 5em 1em
 
 @media (min-width: 850px)
+
+  .content
+    padding: 7em 1em
+
+    p
+      padding: 1em 0
 
   .content--aside,
   .content--aside--location
     float: right
-    width: 40%
+    width: 65%
     margin: 0 0 0 1em
 
   .content:nth-child(odd)
@@ -113,3 +116,10 @@ body
 
   .content--aside--location-rigth
     float: right
+
+    h1, h2, h3, h4
+      margin-left: 0
+
+@media (min-width: $content-max-width)
+  .content
+    padding: 10em 0

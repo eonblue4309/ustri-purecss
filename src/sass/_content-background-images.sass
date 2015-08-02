@@ -1,0 +1,32 @@
+@mixin content-background-image($url)
+  background-image: url($url)
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+.intro-image
+  +content-background-image('images/all-member-tou-rei.jpg')
+
+.what-is-iai-image
+  +content-background-image('images/what-is-iai.jpg')
+
+.what-is-tri-image
+  +content-background-image('images/japan-trip-outside-temple.jpg')
+
+.curriculum-image
+  +content-background-image('images/training-info.jpg')
+
+.honbu-location-image
+  +content-background-image('images/honbu-location.jpg')
+
+.sem-location-image
+  +content-background-image('images/all-member-tou-rei.jpg')
+
+.training-info-image
+  +content-background-image('images/katana.jpg')
+
+.honbu-dojo-image
+  +content-background-image('images/honbu-torii.jpg')
+
+.sem-dojo-image
+  +content-background-image('images/all-member-gedan.jpg')

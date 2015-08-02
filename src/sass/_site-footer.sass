@@ -1,0 +1,40 @@
+.footer-image
+  height: 500px
+  width: 100%
+  +section-image('images/small-ballon-flower.jpg')
+  position: relative
+
+.footer-image-content
+  font-weight: bold
+  background-color: rgba(32,32,32,.6)
+  position: absolute
+  bottom: 0
+  display: inline-block
+  padding: 1em
+
+.footer-nav
+  padding: 3em 0
+  text-align: center
+
+  a
+    display: inline-block
+    text-decoration: none
+    color: $ustri-light
+    padding: .75em 1em
+    border: 5px solid $ustri-light
+
+    &:hover,
+    &:focus
+      color: $ustri-dark
+      background-color: $ustri-light
+
+  a + a
+    margin: 0 0 .5em 1em
+
+@media (min-width: 600px)
+  .footer-nav
+    a
+      display: inline-block
+
+    a + a
+      margin: 0 0 0 1em
